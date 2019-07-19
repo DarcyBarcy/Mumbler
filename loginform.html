@@ -2,77 +2,80 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style> 
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid white;}
+<link rel="stylesheet" type = "text/css" href="color_4_login_page.css">
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+</head>
+<!-- <body style="backround:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCzqMi0BFSg5Vu9d_Y5k-nzY0239i4iK5gK1lkQm94JovRHkOc)"> -->
+<body>
+  <style>
+  body {
+    background: url("Login_background_pic.jpg");
+     /* logo:rgb(255, 241, 168) */
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
 
-button {
-  background-color: #2d5c7f;
-  color: darkblue;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+    }
+  h2   {color: white;}
+  label {color: #2d5c7f;}
 
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: ##2d5c7f;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 20;
-  border-radius: 3S0%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
+  form {border: 3px;}
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button {
+    background-color:white;
+    color: #2d5c7f;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    opacity: 0.8;
   }
   .cancelbtn {
-     width: 30
-     ;
+    width: auto;
+    padding: 10px 18px;
+    background-color: ##2d5c7f;
   }
-}
-</style>
-</head>
-<body style="backround:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCzqMi0BFSg5Vu9d_Y5k-nzY0239i4iK5gK1lkQm94JovRHkOc)">
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  img.logo {
+    width: 20;
+    border-radius: 3S0%;
+  }
+  .container {
+    padding: 16px;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+  }
+    .cancelbtn {
+       width: 30;
+    }
+
+  </style>
 <h2>Login Form</h2>
 
 <form action="/action_page.php">
   <div class="imgcontainer">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEge-PiQqrFDwU1Us5-Y_4q2ckub2VaUQFI9_YCbAkfefclr1b"alt="Avatar" class="avatar">
+    <img src="MUMBLER_LOGO.png"alt="Logo" class="logo">
   </div>
 
   <div class="container">
