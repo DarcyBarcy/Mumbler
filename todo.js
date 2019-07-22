@@ -1,3 +1,10 @@
+function Todo(task, who, dueDate) {
+    this.task = task;
+    this.who = who;
+    this.dueDate = dueDate;
+    this.done = false;
+}
+
 var todos = new Array();
 
 window.onload = init;
@@ -62,6 +69,10 @@ function getFormData() {
     if (checkInputText(date, "Please enter a due date")) return;
 
     console.log("New task: " + task + ", for: " + who + ", by: " + date);
+    var todoItem = new Todo(task, who, date);
+    todos.push(todoItem);
+    addTodoToPage(todoItem);
+    saveTodoData();
 }
 
 function checkInputText(value, msg) {
@@ -70,4 +81,22 @@ function checkInputText(value, msg) {
         return true;
     }
     return false;
+}
+function addTodoToPage(todoItem) {
+    var ul = document.getElementById("todoList");
+    var li = document.createElement("li");
+    li.innerHTML =
+        todoItem.who + " needs to " + todoItem.task + " by " + todoItem.dueDate;
+    ul.appendChild(li);
+    document.forms[0].reset();
+}
+
+function saveTodoData() {
+    var todoJSON = JSON.stringify(todos);
+    var request = new XMLHttpRequest();
+    var URL = "save.php?data=" + encodeURI(todoJSON);
+    request.open("GET", URL);
+    request.setRequestHeader("Content-Type",
+                             "text/plain;charset=UTF-8");
+    request.send();
 }
