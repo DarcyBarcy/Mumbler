@@ -46,6 +46,18 @@ body{
   color:rgb(45, 92, 127);
 }
 
+#lyrics{
+  padding: justify;
+  border: 2px solid #fff1a8;
+  color: #fff1a8;
+  background-color:rgb(45, 92, 127)
+}
+
+#lyrics:hover{
+  background-color: #fff1a8;
+  color:rgb(45, 92, 127);
+}
+
 .border{
   border: 20px solid transparent;
   padding: 5px;
