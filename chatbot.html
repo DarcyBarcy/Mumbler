@@ -6,11 +6,7 @@
                 document.getElementById("intro").style.display="none";
                 var user = document.getElementById("userBox").value;
                 user= user.toLowerCase();
-                var artist= user+"'s";
-                var artistc=user
-                document.getElementById("chatLog").innerHTML= "Would you like to see "+artist+ " profile or if " +artistc+" has concerts near you?";
-                document.getElementById("concerts").style.display="inline";
-                document.getElementById("profile").style.display="inline";
+                document.getElementById("chatLog").innerHTML= "Type in an artist's name or some lyrics from a song to begin...";
               }
 
             function profileopen(){
@@ -43,6 +39,20 @@
                     }
             }
 
+            function find(){
+              var user = document.getElementById("userBox").value;
+              user= user.toLowerCase();
+              var profile="https://genius.com/search?q=";
+              if(/\s/.test(user)){
+                var space=user.replace(/ /g,"%20");
+                profile=profile+space;
+                window.open(profile);
+              }else{
+                profile=profile+user;
+                window.open(profile);
+              }
+            }
+
         </script>
     </head>
     <body>
@@ -50,10 +60,11 @@
         <div class="border">
         <p>- - K A R U N A - -<br></p>
         <p id="chatLog"> </p>
-        <p id="intro"> Hello. Please enter an artist to begin... </p>
+        <p id="intro">Type in an artist's name or some lyrics from a song to begin... </p>
         <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
-        <button type="submit" id="profile" onclick="profileopen()" name="profile" value="Profile" style="display:none;">Profile</button>
-        <button type="submit" id="concerts" onclick="concerts()" name="concerts" value="Concerts" style="display:none;">Concerts</button>
+        <button type="submit" id="profile" onclick="profileopen()" name="profile" value="Profile">Profile</button>
+        <button type="submit" id="concerts" onclick="concerts()" name="concerts" value=">Concerts">Concerts</button>
+        <button type="submit" id="lyrics" onclick="find()" name="lyrics" value="Find Song">Find Song</button>
       </div>
         </div>
 
