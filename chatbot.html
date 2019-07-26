@@ -1,6 +1,8 @@
 <html>
     <head>
       <link rel="stylesheet" type="text/css" href="chatbot.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="tumblr_2.css">
         <script>
             function talk() {
                 document.getElementById("intro").style.display="none";
@@ -8,7 +10,6 @@
                 user= user.toLowerCase();
                 document.getElementById("chatLog").innerHTML= "Type in an artist's name or some lyrics from a song to begin...";
               }
-
             function profileopen(){
                 var user = document.getElementById("userBox").value;
                 user= user.toLowerCase();
@@ -22,7 +23,6 @@
                     window.open(profile);
                         }
             }
-
             function concerts(){
               var user = document.getElementById("userBox").value;
               user= user.toLowerCase();
@@ -38,7 +38,6 @@
                   window.open(profile);
                     }
             }
-
             function find(){
               var user = document.getElementById("userBox").value;
               user= user.toLowerCase();
@@ -52,10 +51,42 @@
                 window.open(profile);
               }
             }
-
         </script>
     </head>
     <body>
+
+
+      
+      <div class="icon-bar">
+  <img src="MUMBLER_LOGO.png" alt="logo">
+    <a class="/action_page.php" href="#">
+        <div class="topnav">
+          <div class="search-container">
+            <form action="/action_page.php">
+              <script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script>
+
+              <div class="gcse-searchbox-only" data-resultsUrl="https://googlecustomsearch.appspot.com/elementv2/two-page_results_elements_v2.html?query=test"></div>
+              <!-- <button onclick="fa fa-search"></button> -->
+              <p id="demo"></p>
+
+              <script>
+              function myFunction() {
+                var x = document.getElementById("mySearch").placeholder;
+                document.getElementById("demo").innerHTML = x;
+              }
+              </script>
+
+            </form>
+          </div>
+        </div>
+    </a>
+    <a href="index.html"><i class="fa fa-home"></i></a>
+    <a href="chatbot.html"><i class="fa fa-male"></i></a>
+  </div>
+
+
+
+
       <div class="bot">
         <div class="border">
         <p>- - K A R U N A - -<br></p>
